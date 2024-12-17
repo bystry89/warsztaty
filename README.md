@@ -39,3 +39,32 @@ Aby wziąć aktywny udział w warsztatach, potrzebujesz konta Google i dostępu 
 4. **Otwórz notatnik na Warsztaty cz. 1**:
    - W folderze "Warsztaty" kliknij dwa razy na plik "warsztaty_1.ipynb"
    - Gotowe!
+  
+     ---
+
+     ## Przygotowanie do części II
+
+1. **Jeśli tego nie zrobiłeś/aś przed tygodniem, wykonaj krok 1**
+   - Patrz wyżej
+  
+2. **Zamontuj swój Google Drive w środowisku Colab**:
+   - Wklej poniższy kod do pierwszej komórki notatnika, po czym wciśnij Shift+Enter (albo znaczek Play obok komórki):
+
+     ```python
+     from google.colab import drive
+     drive.mount('/content/drive')
+     ```
+
+   - Po paru sekundach wyświetli się okno, pytające, czy chcesz połączyć się z Google Drive. Postępuj zgodnie z instrukcjami, aby połączyć swoje Google Drive z Colab. W szczególności, udziel zgody na udzielenie wszystkich uprawnień.
+
+3. **Ściągnij materiały na warsztaty**:
+   - Wklej poniższy kod do drugiej komórki notatnika (eśli nie ma jeszcze drugiej komórki, to utwórz ją klikając na "+ Code"):
+
+     ```python
+     !wget "https://www.dropbox.com/scl/fo/adbm812lgjg4c0dcw6m75/AF5LOOombbJdwrsCHfjuFPc?rlkey=0wddh2fy8rxoolrb9d5yq6mz1&st=y15e4y5g&dl=1" -O "/content/drive/My Drive/warsztaty2.zip"
+     !unzip "/content/drive/My Drive/warsztaty2.zip" -d "/content/drive/My Drive/warsztaty"
+     !rm "/content/drive/My Drive/warsztaty2.zip"
+     ```
+
+   - Uruchom komórkę (Shift + Enter lub ikona "Play" obok komórki).
+   - Ściągniecie materiałów zajmie parę minut.
